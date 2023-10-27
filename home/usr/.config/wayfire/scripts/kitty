@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+##
+## launch alacritty with alt config
+
+CONFIG="$HOME/.config/wayfire/alacritty/alacritty.yml"
+
+if [ "$1" == "-f" ]; then
+	kitty
+elif [ "$1" == "-F" ]; then
+	kitty --start-as fullscreen
+else
+	alacritty --config-file "$CONFIG"
+fi
